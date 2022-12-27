@@ -1,0 +1,10 @@
+[debug] [2022-12-27T07:29:30.236Z] ----------------------------------------------------------------------
+[debug] [2022-12-27T07:29:30.238Z] Command:       /usr/local/bin/firebase /Users/saifurrahman/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase login
+[debug] [2022-12-27T07:29:30.239Z] CLI Version:   11.15.0
+[debug] [2022-12-27T07:29:30.239Z] Platform:      darwin
+[debug] [2022-12-27T07:29:30.240Z] Node Version:  v16.16.0
+[debug] [2022-12-27T07:29:30.246Z] Time:          Tue Dec 27 2022 13:29:30 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-27T07:29:30.253Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
