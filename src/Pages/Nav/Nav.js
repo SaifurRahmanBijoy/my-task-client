@@ -1,10 +1,11 @@
 import { Navbar } from "flowbite-react";
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Nav = () => {
   const [theme, setTheme] = useState("light");
+  const navigate = useNavigate();
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -52,7 +53,10 @@ const Nav = () => {
           </>
         ) : (
           <>
-            <Link to='/login' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent ">
+            <Link
+              to="/login"
+              className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent "
+            >
               Login
             </Link>
           </>
@@ -67,9 +71,12 @@ const Nav = () => {
         fluid={true}
       >
         <Navbar.Brand>
-          <Link to='/' className="self-center btn whitespace-nowrap md:text-xl font-semibold text-slate-700 dark:text-slate-200 font-serif">
+          <h2
+            onClick={() => navigate("/")}
+            className="self-center btn whitespace-nowrap md:text-xl font-semibold text-slate-700 dark:text-slate-200 font-serif cursor-pointer"
+          >
             Tasks Manager
-          </Link>
+          </h2>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="py-5 md:py-0">{menu}</Navbar.Collapse>

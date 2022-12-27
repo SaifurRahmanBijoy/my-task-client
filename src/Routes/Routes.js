@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import AddTask from "../Pages/AddTask/AddTask";
 import HomeLanding from "../Pages/HomeLanding/HomeLanding";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/addtask",
+        element: <AddTask />,
       },
     ],
   },
