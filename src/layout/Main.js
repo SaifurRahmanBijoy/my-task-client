@@ -5,7 +5,7 @@ import Nav from "../Pages/Nav/Nav";
 
 const Main = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col justify-between bg-slate-100 dark:bg-slate-900">
       <Nav></Nav>
       <div>
         <Outlet></Outlet>

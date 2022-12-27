@@ -1,15 +1,15 @@
 import React from "react";
-import todo from "../../Utilities/Todo.png";
+import todo from "../../Utilities/todo.svg";
 
 const HomeLanding = () => {
   return (
     <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center">
       <img
-        className="bg-slate-400 dark:bg-blue-300 p-1 rounded-full w-11/12 md:w-9/12 lg:w-2/5 mx-auto"
+        className=" p-5 rounded-2xl w-11/12 md:w-9/12 lg:w-2/5 mx-auto"
         src={todo}
         alt=""
       />
-      <p className="text-slate-600 dark:text-slate-300 p-5 lg:pl-10 lg:pr-0 font-thin text-justify lg:text-2xl">
+      <p className="text-slate-600 dark:text-slate-300 p-5 lg:pl-10 lg:pr-0 font-normal text-justify lg:text-xl">
         The need for a task management app depends upon the need of the user, if
         you are performing the tasks that require resources both financial and
         physical, and your tasks are time-bound and need reporting, then you
