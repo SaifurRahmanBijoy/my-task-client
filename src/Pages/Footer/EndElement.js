@@ -3,13 +3,12 @@ import React from "react";
 
 const EndElement = () => {
   return (
-    <div className="py-2">
-      <Footer className="px-10 py-2 dark:bg-slate-600" container={true}>
+    <div className="pt-2">
+      <Footer className="px-10 py-1 bg-slate-300 dark:bg-slate-700 shadow-md rounded-b-none rounded-t-md" >
         <Footer.Copyright by="Saifur Rahman" year={2022} />
         <Footer.LinkGroup className="hidden md:flex flex-wrap justify-around">
           <Footer.Link>About</Footer.Link>
           <Footer.Link>Privacy Policy</Footer.Link>
-          <Footer.Link>Licensing</Footer.Link>
           <Footer.Link>Contact</Footer.Link>
         </Footer.LinkGroup>
       </Footer>

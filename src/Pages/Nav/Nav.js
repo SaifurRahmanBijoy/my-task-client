@@ -39,19 +39,18 @@ const Nav = () => {
     </>
   );
   return (
-    <div className="py-2">
+    <div className="pb-2">
       <Navbar
-        className="bg-slate-200 dark:bg-slate-600 shadow-sm w-11/12 mx-auto px-4 md:px-10"
+        className="bg-slate-300 dark:bg-slate-700 rounded-b-md shadow w-11/12 mx-auto px-10 md:px-10"
         fluid={true}
-        rounded={true}
       >
         <Navbar.Brand>
-          <span className="self-center whitespace-nowrap md:text-xl font-semibold dark:text-white font-serif">
+          <span className="self-center whitespace-nowrap md:text-xl font-semibold text-slate-700 dark:text-slate-200 font-serif">
             Tasks Manager
           </span>
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse>{menu}</Navbar.Collapse>
+        <Navbar.Collapse className="py-5 md:py-0">{menu}</Navbar.Collapse>
         <label
           htmlFor="default-toggle"
           className="inline-flex relative items-center justify-center cursor-pointer mx-2"
@@ -60,9 +59,9 @@ const Nav = () => {
             type="checkbox"
             onClick={handleTheme}
             id="default-toggle"
-            className="sr-only peer"
+            className="sr-only peer shadow-inner"
           />
-          <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-800"></div>
+          <div className="w-11 h-6 bg-gray-100 peer-focus:outline-none  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-red-400 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-800"></div>
         </label>
       </Navbar>
     </div>
