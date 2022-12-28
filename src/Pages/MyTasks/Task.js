@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import UpdateModal from "./UpdateModal";
 
 const Task = ({ myTask, refetch }) => {
+  const [showModal, setShowModal] = useState(false);
+
   const { _id, task, completed } = myTask;
   const handleCompleted = (id) => {
     fetch(`http://localhost:5000/task/${id}`, {
@@ -31,6 +34,16 @@ const Task = ({ myTask, refetch }) => {
         }
       });
   };
+
+  if (showModal) {
+    return (
+      <UpdateModal
+        setShowModal={setShowModal}
+        myTask={myTask}
+        refetch={refetch}
+      ></UpdateModal>
+    );
+  }
   return (
     <div className="block bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 p-4">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-300 text-center">
@@ -38,7 +51,7 @@ const Task = ({ myTask, refetch }) => {
       </h5>
       <div className="grid md:grid-cols-3 gap-3">
         {completed ? (
-          <p className="dark:text-slate-400">completed</p>
+          <p className="dark:text-slate-400 text-center">completed</p>
         ) : (
           <button
             type="button"
@@ -48,7 +61,10 @@ const Task = ({ myTask, refetch }) => {
             Completed
           </button>
         )}
-        <button className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+        <button
+          onClick={() => setShowModal(true)}
+          className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        >
           Update
         </button>
         <button

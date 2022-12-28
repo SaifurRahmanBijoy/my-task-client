@@ -23,10 +23,15 @@ const MyTasks = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="w-10/12 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {myTasks.map((t, i) => (
-        <Task key={i} refetch={refetch} myTask={t}></Task>
-      ))}
+    <div className="w-10/12 mx-auto ">
+      <h2 className="text-2xl font-mono font-thin text-center mb-6 border-b-2 dark:text-slate-400 border-gray-600 dark:border-gray-500">
+        My tasks
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {myTasks.map((t, i) => (
+          <Task key={i} refetch={refetch} myTask={t}></Task>
+        ))}
+      </div>
     </div>
   );
 };
