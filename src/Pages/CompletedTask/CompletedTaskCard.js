@@ -33,6 +33,8 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        refetch();
+        event.target.reset();
       });
   };
   return (
@@ -52,7 +54,7 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 my-4 px-3">
         <div className="col-span-2 pb-4">
           <h2 className="text-black dark:text-slate-300 underline">
-            Comments/Labels
+            Comments/Labels will be displayed here:
           </h2>
           {comments?.map((c, i) => (
             <p key={i} className="text-black dark:text-slate-300 text-xs">

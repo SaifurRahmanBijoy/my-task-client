@@ -109,7 +109,7 @@ const Nav = () => {
         <Navbar.Collapse className="py-5 md:py-0">{menu}</Navbar.Collapse>
         <button
           onClick={handleTheme}
-          className="bg-gray-300 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:bg-opacity-40 dark:border-white dark:text-white skew-y-3"
+          className="bg-sky-400 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:bg-opacity-40 dark:border-white dark:text-white skew-y-3"
         >
           <CiDark></CiDark>
         </button>
