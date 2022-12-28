@@ -4,23 +4,20 @@ import { useForm } from "react-hook-form";
 const UpdateModal = ({ setShowModal, myTask, refetch }) => {
   const { handleSubmit, register } = useForm();
   const handleAgain = (data) => {
-    const task = data.task;
+    const task = { task: data.task };
     const id = myTask._id;
-    console.log(id, task);
 
     fetch(`http://localhost:5000/taskup/${id}`, {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
+      body: JSON.stringify(task),
     })
       .then((res) => res.json())
-      .then((data) => {
-        if (data.modifiedCount > 0) {
-          console.log(data);
-          setShowModal(false);
-          refetch();
-        }
+      .then((result) => {
+        refetch();
+        setShowModal(false);
       });
   };
   return (
