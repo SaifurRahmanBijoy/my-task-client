@@ -55,7 +55,7 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
             Comments/Labels
           </h2>
           {comments?.map((c, i) => (
-            <p className="text-black dark:text-slate-300 text-xs">
+            <p key={i} className="text-black dark:text-slate-300 text-xs">
               {i + 1}. {c.comment}
             </p>
           ))}
@@ -63,7 +63,11 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
         <div>
           <form onSubmit={handleCommentSubmit} className="flex flex-col">
             <input type="text" name="comment" id="" />
-            <input className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 my-2" type="submit" value="Submit" />
+            <input
+              className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 my-2"
+              type="submit"
+              value="Submit"
+            />
           </form>
         </div>
       </div>
