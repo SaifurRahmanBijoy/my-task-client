@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 import todo from "../../Utilities/todo.svg";
 import Modal from "./Modal";
 
 const HomeLanding = () => {
   const [showModal, setShowModal] = useState(false);
+  const { user } = useContext(AuthContext);
   if (showModal) {
     return <Modal setShowModal={setShowModal}></Modal>;
   }
@@ -24,12 +26,16 @@ const HomeLanding = () => {
             reporting, then you have the need for the usage of task management
             apps.
           </p>
-          <button
-            onClick={() => setShowModal(true)}
-            className="mt-3 w-full inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 font-medium text-xs leading-normal uppercase rounded hover:bg-opacity-25 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-          >
-            Add task
-          </button>
+          {user?.email ? (
+            <button
+              onClick={() => setShowModal(true)}
+              className="mt-3 w-full inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 font-medium text-xs leading-normal uppercase rounded hover:bg-opacity-25 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            >
+              Add task
+            </button>
+          ) : (
+            <p className="text-red-400 text-sm font-mono font-thin my-3">Please login first to add task</p>
+          )}
         </div>
       </div>
     </div>

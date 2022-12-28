@@ -21,7 +21,7 @@ const Contents = () => {
     return <Loading></Loading>;
   }
   return (
-    <section className="overflow-hidden text-gray-700 ">
+    <section className="grid grid-cols-1 gap-4 lg:grid-cols-3 sm:grid-cols-2 w-10/12 mx-auto">
       {myTasks?.map((t, i) => (
         <Content key={i} content={t}></Content>
       ))}

@@ -24,6 +24,7 @@ const SignUp = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((e) => {
         console.log(e);
@@ -104,8 +105,13 @@ const SignUp = () => {
             Login
           </Link>
         </p>
-        <div className="flex items-center justify-center py-2 dark:text-gray-200">OR</div>
-        <button onClick={handleGoogleSignUp} className="py-2 uppercase text-sm font-mono mt-2 w-full px-4 bg-transparent text-blue-400 font-semibold border border-blue-400 rounded hover:bg-blue-400 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+        <div className="flex items-center justify-center py-2 dark:text-gray-200">
+          OR
+        </div>
+        <button
+          onClick={handleGoogleSignUp}
+          className="py-2 uppercase text-sm font-mono mt-2 w-full px-4 bg-transparent text-blue-400 font-semibold border border-blue-400 rounded hover:bg-blue-400 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+        >
           CONTINUE WITH GOOGLE
         </button>
       </div>

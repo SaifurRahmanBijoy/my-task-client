@@ -10,6 +10,7 @@ const Modal = ({ setShowModal }) => {
 
   const handleTask = (data) => {
     console.log(user, data);
+
     const task = {
       task: data.task,
       email: user.email,
