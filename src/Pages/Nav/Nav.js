@@ -37,18 +37,29 @@ const Nav = () => {
   const menu = (
     <>
       <li>
-        <Link className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent ">
+        <Link
+          to="/addtask"
+          className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent "
+        >
           Add Tasks
         </Link>
       </li>
       <li>
-        <Link className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent ">
+        <Link to="/mytasks" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent ">
           My Tasks
         </Link>
       </li>
       <li>
         <Link className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent ">
           Completed Tasks
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/media"
+          className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  dark:text-gray-50 dark:hover:text-blue-400 md:dark:hover:bg-transparent "
+        >
+          Media
         </Link>
       </li>
       <li>
@@ -77,7 +88,7 @@ const Nav = () => {
   return (
     <div className="pb-2">
       <Navbar
-        className="bg-slate-300 dark:bg-slate-700 rounded-b-md shadow md:w-11/12 mx-2 md:mx-auto md:px-10"
+        className="bg-slate-300 dark:bg-slate-700 rounded-b-md drop-shadow-md md:w-11/12 mx-2 md:mx-auto md:px-10"
         fluid={true}
       >
         <Navbar.Brand>
@@ -90,7 +101,7 @@ const Nav = () => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="py-5 md:py-0">{menu}</Navbar.Collapse>
-        <button className="bg-gray-300 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:border-white dark:text-white">
+        <button className="bg-gray-300 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:bg-opacity-40 dark:border-white dark:text-white skew-y-3">
           <CiDark onClick={handleTheme}></CiDark>
         </button>
       </Navbar>

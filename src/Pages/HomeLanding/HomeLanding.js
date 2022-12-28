@@ -1,10 +1,13 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 import todo from "../../Utilities/todo.svg";
+import Modal from "./Modal";
 
 const HomeLanding = () => {
-  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  if (showModal) {
+    return <Modal setShowModal={setShowModal}></Modal>;
+  }
   return (
     <div>
       <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center">
@@ -22,9 +25,7 @@ const HomeLanding = () => {
             apps.
           </p>
           <button
-            onClick={() => {
-              navigate("/addtask");
-            }}
+            onClick={() => setShowModal(true)}
             className="mt-3 w-full inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 font-medium text-xs leading-normal uppercase rounded hover:bg-opacity-25 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
           >
             Add task
