@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import UpdateModal from "./UpdateModal";
 
 const Task = ({ myTask, refetch }) => {
@@ -44,8 +45,11 @@ const Task = ({ myTask, refetch }) => {
       ></UpdateModal>
     );
   }
+  if (completed) {
+    return null;
+  }
   return (
-    <div className="block bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 p-4">
+    <div className="block bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-900 p-4">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-300 text-center">
         {task}
       </h5>
@@ -56,14 +60,14 @@ const Task = ({ myTask, refetch }) => {
           <button
             type="button"
             onClick={() => handleCompleted(_id)}
-            className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-2 py-1 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+            className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 bg-opacity-50 dark:bg-opacity-50 focus:ring-purple-300 font-medium rounded-lg text-sm px-2 py-1 bg-opacity-50 dark:bg-opacity-50 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           >
             Completed
           </button>
         )}
         <button
           onClick={() => setShowModal(true)}
-          className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          className="focus:outline-none text-white bg-opacity-50 dark:bg-opacity-50 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
         >
           Update
         </button>
