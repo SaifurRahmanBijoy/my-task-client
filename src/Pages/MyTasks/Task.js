@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import UpdateModal from "./UpdateModal";
 
 const Task = ({ myTask, refetch }) => {
@@ -7,7 +6,7 @@ const Task = ({ myTask, refetch }) => {
 
   const { _id, task, completed } = myTask;
   const handleCompleted = (id) => {
-    fetch(`http://localhost:5000/task/${id}`, {
+    fetch(`https://my-task-server.vercel.app/task/${id}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -22,7 +21,7 @@ const Task = ({ myTask, refetch }) => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://my-task-server.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

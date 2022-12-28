@@ -3,7 +3,7 @@ import React from "react";
 const CompletedTaskCard = ({ myTask, refetch }) => {
   const { _id, task, completed, comments } = myTask;
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://my-task-server.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -23,7 +23,7 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
     event.preventDefault();
     const comment = { comment: event.target.comment.value };
 
-    fetch(`http://localhost:5000/comments/${_id}`, {
+    fetch(`https://my-task-server.vercel.app/comments/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

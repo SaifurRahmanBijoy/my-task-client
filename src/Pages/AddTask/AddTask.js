@@ -31,7 +31,7 @@ const AddTask = () => {
           };
 
           // save task info to mongoDB
-          fetch("http://localhost:5000/add_tasks", {
+          fetch("https://my-task-server.vercel.app/add_tasks", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -50,7 +50,9 @@ const AddTask = () => {
   return (
     <div className="lg:w-5/12 w-11/12 mx-auto bg-slate-200 dark:bg-slate-800 px-10 py-10 rounded-t-lg">
       <form onSubmit={handleSubmit(handleTask)}>
-        <h2 className="text-center text-xl text-gray-900 dark:text-gray-300 mb-3 uppercase">Add your task to the list</h2>
+        <h2 className="text-center text-xl text-gray-900 dark:text-gray-300 mb-3 uppercase">
+          Add your task to the list
+        </h2>
         <div>
           <label
             htmlFor="task"

@@ -7,7 +7,7 @@ const Modal = ({ setShowModal }) => {
   const { user } = useContext(AuthContext);
   const { handleSubmit, register } = useForm();
   const navigate = useNavigate();
-  
+
   const handleTask = (data) => {
     console.log(user, data);
     const task = {
@@ -16,7 +16,7 @@ const Modal = ({ setShowModal }) => {
     };
 
     // save task info to mongoDB
-    fetch("http://localhost:5000/add_tasks", {
+    fetch("https://my-task-server.vercel.app/add_tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

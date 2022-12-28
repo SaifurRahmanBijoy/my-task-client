@@ -7,7 +7,7 @@ const UpdateModal = ({ setShowModal, myTask, refetch }) => {
     const task = { task: data.task };
     const id = myTask._id;
 
-    fetch(`http://localhost:5000/taskup/${id}`, {
+    fetch(`https://my-task-server.vercel.app/taskup/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
