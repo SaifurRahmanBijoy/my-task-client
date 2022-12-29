@@ -38,9 +38,9 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
       });
   };
   return (
-    <div className="block bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-900 p-4">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-300 text-center">
-        {task}
+    <div className="block bg-white border border-gray-200 rounded-sm shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-900 p-4">
+      <h5 className="text-slate-700 dark:text-slate-200 mb-3 text-md font-mono font-thin text-center">
+        Task: {task}
       </h5>
       <div className="flex justify-center items-center">
         <button
@@ -53,17 +53,22 @@ const CompletedTaskCard = ({ myTask, refetch }) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 my-4 px-3">
         <div className="col-span-2 pb-4">
-          <h2 className="text-black dark:text-slate-300 underline">
-            Comments/Labels will be displayed here:
+          <h2 className="text-slate-600 dark:text-slate-500 text-sm font-mono font-bold border-b dark:border-slate-500 border-slate-700">
+            Comments/Labels:
           </h2>
-          {comments?.map((c, i) => (
-            <p key={i} className="text-black dark:text-slate-300 text-xs">
-              {i + 1}. {c.comment}
-            </p>
-          ))}
+          <div className="my-1">
+            {comments?.map((c, i) => (
+              <p
+                key={i}
+                className="text-slate-600 dark:text-slate-500 text-xs font-mono font-thin"
+              >
+                {i + 1}. {c.comment}
+              </p>
+            ))}
+          </div>
         </div>
         <div>
-          <form onSubmit={handleCommentSubmit} className="flex flex-col">
+          <form onSubmit={handleCommentSubmit} className="flex flex-col lg:mt-10">
             <input type="text" name="comment" id="" />
             <input
               className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 my-2"

@@ -94,13 +94,13 @@ const Nav = () => {
   return (
     <div className="pb-2">
       <Navbar
-        className="bg-slate-300 dark:bg-slate-700 rounded-b-md drop-shadow-md md:w-11/12 mx-2 md:mx-auto md:px-10"
+        className="bg-slate-300 dark:bg-slate-700 rounded-b-md drop-shadow-md md:w-11/12 md:mx-auto md:px-10 mx-1"
         fluid={true}
       >
         <Navbar.Brand>
           <h2
             onClick={() => navigate("/")}
-            className="self-center btn whitespace-nowrap md:text-xl font-semibold text-slate-700 dark:text-slate-200 font-serif cursor-pointer"
+            className="self-center btn whitespace-nowrap md:text-xl font-semibold text-slate-700 dark:text-slate-200 font-serif cursor-pointer pl-3 md:pl-0"
           >
             Tasks Manager
           </h2>
@@ -109,9 +109,9 @@ const Nav = () => {
         <Navbar.Collapse className="py-5 md:py-0">{menu}</Navbar.Collapse>
         <button
           onClick={handleTheme}
-          className="bg-sky-400 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:bg-opacity-40 dark:border-white dark:text-white skew-y-3"
+          className="bg-sky-400 border-b-2 hover:border border-black p-2 rounded-full dark:bg-blue-500 dark:bg-opacity-40 dark:border-white dark:text-white skew-y-3 mr-2 md:mr-0"
         >
-          <CiDark></CiDark>
+          <CiDark className=""></CiDark>
         </button>
       </Navbar>
     </div>

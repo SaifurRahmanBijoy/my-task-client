@@ -24,3 +24,4 @@
 
 - ### SASS: Syntactically Awesome Style Sheets
 - ### Flowbite
+- ### Redux

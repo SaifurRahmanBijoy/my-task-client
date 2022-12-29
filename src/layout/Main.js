@@ -10,7 +10,7 @@ const Main = () => {
       <div>
         <Outlet></Outlet>
       </div>
-      <div className="w-11/12 mx-auto">
+      <div className="md:w-11/12 md:mx-auto">
         <EndElement></EndElement>
       </div>
     </div>
