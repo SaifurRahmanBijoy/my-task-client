@@ -9,7 +9,7 @@ const EndElement = () => {
   const showDetails = () => {
     const action = {
       type: "SET_USER",
-      user: "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark. ",
+      user: "This work has been done by Saifur Rahman",
     };
     dispatch(action);
   };
@@ -18,7 +18,9 @@ const EndElement = () => {
     <div className="pt-2" onClick={showDetails}>
       <div className="text-center py-1 bg-slate-300 dark:bg-slate-700 shadow-md rounded-b-none rounded-t-md">
         <div className="flex justify-center items-center">
-          <p className=" text-slate-700 dark:text-slate-400 font-thin font-mono text-sm">{copyRight}</p>
+          <p className=" text-slate-700 dark:text-slate-400 font-thin font-mono text-sm">
+            {copyRight}
+          </p>
         </div>
         {/* <Footer.LinkGroup className="hidden md:flex flex-wrap justify-around">
           <Footer.Link>About</Footer.Link>
