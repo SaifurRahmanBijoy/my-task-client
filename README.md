@@ -20,8 +20,7 @@
 - Express, CORS, Dotenv, NodeJS, MongoDB for backend.
 
 
-## List of technologies that I have explored for the first in this work (framework,libraries) used in this project:
-
+## List of technologies that I have explored for the first in this work (framework,libraries): 
 - ### SASS: Syntactically Awesome Style Sheets
 - ### Flowbite
 - ### Redux
